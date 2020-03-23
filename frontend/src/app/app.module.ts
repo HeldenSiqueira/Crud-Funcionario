@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcionario-list.component';
+import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 
 
 
@@ -15,6 +16,10 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
     AppComponent,
 
     FuncionarioListComponent,
+
+  
+
+    FuncionarioFormComponent,
  
     
   ],
