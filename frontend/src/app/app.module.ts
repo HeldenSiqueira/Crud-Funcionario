@@ -10,6 +10,9 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
 import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 import { FuncionarioUpdateComponent } from './funcionarios/funcionario-update/funcionario-update.component';
 import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/funcionario-details.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CampoErrorComponent } from './shared/campo-error/campo-error.component';
+import { ErrorMsgComponent } from './shared/error-msg/error-msg.component';
 
 
 
@@ -19,19 +22,11 @@ import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/
     AppComponent,
 
     FuncionarioListComponent,
-
-  
-
     FuncionarioFormComponent,
-
-  
-
     FuncionarioUpdateComponent,
-
-  
-
     FuncionarioDetailsComponent,
- 
+    ErrorMsgComponent,
+    CampoErrorComponent
     
   ],
   imports: [
@@ -41,7 +36,8 @@ import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/
     HttpClientModule,
     ReactiveFormsModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

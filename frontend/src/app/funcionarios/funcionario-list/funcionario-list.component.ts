@@ -1,3 +1,4 @@
+import { FuncionarioDetailsComponent } from '../funcionario-details/funcionario-details.component';
 import { Observable } from "rxjs";
 import { FuncionarioService } from "../funcionario.service";
 import { Funcionario } from "../funcionario";
@@ -15,10 +16,33 @@ export class FuncionarioListComponent implements OnInit {
   constructor(private funcionarioService: FuncionarioService,
     private router: Router) { }
 
+    searchText;
+  Funcionarios = []
+  ;
+
   ngOnInit() {
     this.reloadData();
   }
   reloadData() {
     this.funcionarios = this.funcionarioService.getFuncionarioList();
   }
+
+  deleteFuncionario(id: number) {
+    this.funcionarioService.deleteFuncionario(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log(error));
+  }
+
+ FuncionarioDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
+  updateFuncionario(id: number){
+    this.router.navigate(['update', id]);
+  }
 }
+
+

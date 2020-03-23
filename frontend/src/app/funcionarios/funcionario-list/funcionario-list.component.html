@@ -1,32 +1,39 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2>Lista de Funcionários</h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Email</th>
-                <th> </th>
-              </tr>
-            </thead>
-        
-            <tbody>
-              <tr *ngFor="let funcionario of funcionarios | async">
-                <td>{{funcionario.nome}}</td>
-                <td>{{funcionario.sobrenome}}</td>
-                <td>{{funcionario.email}}</td>
-                <td><button  class="btn btn-danger">Deletar</button>
-                    <button  class="btn btn-info" style="margin-left: 10px">Editar</button>
-                    <button  class="btn btn-dark" style="margin-left: 10px">Detalhes</button>
-                </td>
-              </tr>
-            </tbody>
-          
-          </table>
-        </div>
+  <div class="panel-heading">
+    <h2>Lista de Funcionários</h2>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="searchText" autocomplete="off">
       </div>
-  
-  
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+              <th>Email</th>
+              <th> </th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr *ngFor="let funcionario of funcionarios | async | filter:searchText">
+              <td>{{funcionario.nome}}</td>
+              <td>{{funcionario.sobrenome}}</td>
+              <td>{{funcionario.email}}</td>
+              <td><button (click)="deleteFuncionario(funcionario.id)" class="btn btn-danger">Deletar</button>
+                  <button (click)="updateFuncionario(funcionario.id)" class="btn btn-info" style="margin-left: 10px">Editar</button>
+                  <button (click)="FuncionarioDetails(funcionario.id)" class="btn btn-dark" style="margin-left: 10px">Detalhes</button>
+              </td>
+            </tr>
+          </tbody>
+        
+        </table>
+      </div>
+    </div>
+
