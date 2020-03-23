@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcionario-list.component';
 import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 import { FuncionarioUpdateComponent } from './funcionarios/funcionario-update/funcionario-update.component';
+import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/funcionario-details/funcionario-details.component';
 
 
 
@@ -25,6 +26,10 @@ import { FuncionarioUpdateComponent } from './funcionarios/funcionario-update/fu
   
 
     FuncionarioUpdateComponent,
+
+  
+
+    FuncionarioDetailsComponent,
  
     
   ],
