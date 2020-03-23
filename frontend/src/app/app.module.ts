@@ -10,6 +10,8 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
 import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 import { FuncionarioUpdateComponent } from './funcionarios/funcionario-update/funcionario-update.component';
 import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/funcionario-details/funcionario-details.component';
+import { CampoErrorComponent } from './shared/campo-error/campo-error.component';
+import { ErrorMsgComponent } from './shared/error-msg/error-msg.component';
 
 
 
@@ -30,6 +32,14 @@ import { FuncionarioDetailsComponent } from './funcionarios/funcionario-details/
   
 
     FuncionarioDetailsComponent,
+
+  
+
+    CampoErrorComponent,
+
+  
+
+    ErrorMsgComponent,
  
     
   ],
